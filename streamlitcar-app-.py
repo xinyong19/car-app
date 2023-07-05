@@ -5,6 +5,14 @@ import pickle
 # Load the pickled model
 model = pickle.load(open("Linear.pkl", "rb"))
 
+
+  # Header and description
+    st.header("Welcome to the Car Selling Price Prediction App")
+    st.markdown("""
+        This application predicts the selling price of a car based on various factors.
+        Please enter the car details in the sidebar and click on the **Predict** button.
+    """)
+
 def main():
     st.title("Car Selling Price Prediction")
     st.markdown("---")
@@ -38,12 +46,6 @@ def main():
         st.subheader("Predicted Selling Price")
         st.success(f"The predicted selling price for the car is: {prediction[0]:.2f} USD")
 
-    # Header and description
-    st.header("Welcome to the Car Selling Price Prediction App")
-    st.markdown("""
-        This application predicts the selling price of a car based on various factors.
-        Please enter the car details in the sidebar and click on the **Predict** button.
-    """)
 
 if __name__ == "__main__":
     main()
