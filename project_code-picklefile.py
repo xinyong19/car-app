@@ -334,54 +334,6 @@ pwd
 # In[47]:
 
 
-pip show scikit-learn
-
-
-# In[48]:
-
-
-get_ipython().system('pip freeze')
-
-
-# In[49]:
-
-
-pip install -r libraries.txt --no-index --find-links=file:///tmp > requirements.txt
-
-
-# In[52]:
-
-
-from sklearn.compose import ColumnTransformer
-from sklearn.pipeline import Pipeline
-from sklearn.preprocessing import StandardScaler,OneHotEncoder
-from sklearn.linear_model import LinearRegression
-
-# Define the column transformer
-column_transformer = ColumnTransformer([
-    ('numeric_features', StandardScaler(), ['numerical_feature_1', 'numerical_feature_2']),
-    ('categorical_features', OneHotEncoder(), ['categorical_feature'])
-])
-
-
-# In[56]:
-
-
-# Fit the pipeline to the training data
-clf.fit(X_train, y_train)
-
-# Make predictions on new data
-predictions = clf.predict(X_test)
-
-
-# In[57]:
-
-
-predictions
-
-
-# In[ ]:
-
 
 
 
