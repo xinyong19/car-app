@@ -24,7 +24,7 @@ df
 # In[6]:
 
 
-model = pickle.load(open(r"C:\Users\maqpr\Downloads\LinearRegressionModel.pkl",'rb'))
+model = pickle.load(open("Linear.pkl",'rb'))
 
 
 # In[7]:
